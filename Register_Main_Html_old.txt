@@ -1,0 +1,93 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	網路掛號
+</title><link href="css/reset.css" rel="stylesheet" type="text/css" media="screen" /><link href="css/mold.css" rel="stylesheet" type="text/css" /><link href="css/font.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="lib/tw_cn.js"></script><!--繁轉簡 http://sofree.cc/js-tw-cn/ -->
+</head>
+<body>
+    <form name="form1" method="post" action="default.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTQyODAwNDMzOWRkSrfAtPTvbX4Q2rjXazBFoASOXlk=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5078B85C" />
+    <div id="page">
+        <div id="indexheader">
+        </div>
+        <div id="content">
+            <div id="contentGrayBG">
+                <div id="content_main">
+                </div>
+            <div id="way" style="">
+<div id="wayContent" style="font-weight: normal;">
+
+<div id="RegisteredWeb">
+	<div id="R_titl"><img alt="網路預約掛號" src="./images/RegisteredWeb.jpg" width="113" height="25"></div>
+	<table id="R_tab" cellspacing="1">
+	<tbody>
+	<tr>
+		<td width="105">&nbsp;</td>
+		<td width="300" align="left">網　　頁： <a title="進入網路掛號系統" href="./OINetReg.Reg/Reg_NetReg.aspx"><img alt="進入網路掛號系統" src="./images/BTN_intoC.gif"></a></td>
+		<td width="300" align="left"><a title="進入網路掛號系統" href="./OINetReg.Reg/Reg_NetReg.aspx?lang=E"><img alt="進入網路掛號系統" src="./images/BTN_intoE.gif"></a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td align="left">掛號時間：24小時 <br></td>
+	</tr>
+	</tbody>
+	</table>
+</div>
+</div>
+
+		<div id="R_titl" style="font-weight: normal;"><img alt="掛號說明Registration Instruction" src="./images/Default_cht/explanationTit.png" width="250" height="80"></div>
+	<div id="explanationContent" style="">
+	<ul style="">
+                  <li style=""><font color="#ff0000" style="font-weight: normal;">&nbsp;</font><span style="color: rgb(51, 51, 255); background-color: rgb(255, 255, 51); font-weight: bold; text-decoration-line: underline;"><a href="https://register.typc.mohw.gov.tw/WebFastDrug/Default.aspx">慢箋預約</a></span></li><li style="font-weight: normal;"><font color="red">【現場掛號時間】</font>：內容請點選右側連結==&gt;<a href="https://www.typc.mohw.gov.tw/?aid=503&amp;pid=41&amp;page_name=detail&amp;iid=266">『門診掛號須知』</a> ，<a href="https://www.typc.mohw.gov.tw/?aid=512&amp;pid=0&amp;page_name=detail&amp;type=3&amp;iid=4">『現場掛號時間』</a>。</li>
+                     <li style="font-weight: normal;">     【初診】：只受理現場櫃台掛號。</li>
+                     <li style="font-weight: normal;">     【成人初診】：<font color="red">限掛一診</font>。 
+				 <br>成人門診提供戒菸門診服務。</li>
+
+                        <li style="font-weight: normal;">  【兒青初診】：務必請由<font color="red">監護人與個案一同到診</font>，初診名額有限制，請儘早就診。
+			<br>相關說明可點選右側連結本院網站 <a href="https://www.typc.mohw.gov.tw/?aid=52&amp;pid=42&amp;page_name=detail&amp;iid=111">『兒童精神科初診需知』</a>。 </li>
+
+                        <li style="font-weight: normal;">  【複診】：歡迎多利用網路預約掛號，請點選上方按鈕，進入網路掛號服務。</li>
+
+                         <li style="font-weight: normal;"> 【青少年戒癮諮詢】：請洽酒藥癮門診。</li>
+
+                         <li style="font-weight: normal;"> <font color="red">【特別說明】：兩年以上未就診，視同初診。</font> 
+                                 <br>               透過網路預約掛號之診號，會於就診當日重新安排（以初診流程處理）。 
+                                   <br>            故請兩年以上未就診之病人於就診當日提早到院，並請先到門診護理站報到 
+                                    <br>           謝謝您，祝您健康。</li>
+
+	<ul style="font-weight: normal;">
+	</ul></ul></div><div id="time" style="font-weight: normal;"></div><div style="font-weight: normal;"><img alt="看診時間" src="./images/Default_cht/timeTit.png" width="250" height="85"></div><table id="musterTime_tab" cellspacing="1" style="font-weight: normal;">
+	
+
+	
+	
+	
+	</table><table id="Time_tab" cellspacing="1" style="font-weight: normal;">
+	<tbody>
+	<tr></tr>
+	<tr>
+	<td><img alt="看診時間" src="./images/網掛公告_1070621_1.jpg" width="600"></td></tr>
+	</tbody></table>
+</div></div>
+        </div>
+        <div id="PageFooter_content"><div id="footer">
+<div id="footerText">
+<div id="name">衛生福利部桃園療養院</div>
+<div>33058 桃園市桃園區龍壽街71號</div>
+<div id="info">電話：(03) 369-8553 總機 9&nbsp; 傳真：(03) 360-6929 電子郵件：<a href="mailto:super@typc.mohw.gov.tw">super@typc.mohw.gov.tw</a> </div>
+<div id="note">禁止任何網際網路服務業者轉錄本院網路資訊之內容供人點閱。但以網路搜尋或超連結方式，進入本院之網址（域）直接點閱者，不在此限。</div>
+<div id="note">本網站建議使用 Chrome 瀏覽器以獲得最佳的安全性</div></div></div></div>
+
+
+    </div>
+    </form>
+
+
+
+</body>
+</html>

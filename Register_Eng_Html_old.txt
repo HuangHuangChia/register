@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<!--(HTML 5 新式宣告)-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+    <!--直接指定瀏覽器版本，避開IE相容性問題-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><title>
+	網路掛號
+</title><link href="../css/StyleSheet.css" rel="stylesheet" type="text/css" /><link href="../css/ZSY.css" rel="stylesheet" type="text/css" /><link href="../css/controls.css" rel="stylesheet" type="text/css" /><link href="../css/elements.css" rel="stylesheet" type="text/css" /><link href="../css/option.css" rel="stylesheet" type="text/css" /><link href="../css/reset.css" rel="stylesheet" type="text/css" media="screen" /><link href="../css/mold.css" rel="stylesheet" type="text/css" /><link href="../css/font.css" rel="stylesheet" type="text/css" /><link href="../css/m02.css" rel="stylesheet" type="text/css" /><link href="../css/m02a.css" rel="stylesheet" type="text/css" /><link href="../css/m04.css" rel="stylesheet" type="text/css" /><link id="ctl00_RefStyleSheet" rel="stylesheet" type="text/css" />
+    
+    <!--引用jQuery-->
+    
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../lib/jquery-migrate-1.4.1.min.js"></script>
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="Reg_NetReg.aspx?lang=E" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/OINetReg/ScriptResource.axd?d=njYz4p5xcfp2-JrZe6msEEq3CJBlryGrIuXJrqYfkDl7ai8B0tIAxh64TVHv1g3Etlll2-o6AzhyTxCs0Ii-3_-6mhI3OrQDktdxYVRsX2ysKSvF6BvMygnbZLQvwZ8M7_XV9DuaT17tGWufcdiq2kSzXtNY0PrXEDQz1XZlQuB8Kran0&amp;t=3f4a792d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B75409E9" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="cKBO60GLxqB3QdbCLtoYFrIoClprWCbp3Ie3ZHgyH1FmK2uqtP+ZRr8N+CjykYTkdZKOwHa/GudS4miD2rl/TnPmY6DxMRLnQLQTNymS8vpuRARj1WEGjrWfiYkCwPnVRvsys9+liyuMHG6L1XcZIGdNPYf9k1mtFUHewCJYEAJBV2mi" />
+        <div id="page">
+            
+            <div id="header">
+                <div id="systemtime">
+                    
+                    <span id="ctl00_lblDate"><font color="#FFFFFF"></font></span>&nbsp;
+                <span id="ctl00_lblVisitor"><font color="#FFFFFF">[The total number of visitors:3325344]</font></span>
+                    <input type="hidden" name="ctl00$hfServerTime" id="ctl00_hfServerTime" value="1662287325605.6" />
+
+                    <script type="text/javascript">
+                        var systemTime = document.getElementById('ctl00_hfServerTime').value;
+                        var seconds = parseInt(systemTime);
+
+                        showTime();
+
+                        function runTime() {
+                            seconds += 1000;
+                            showTime(seconds);
+                        }
+
+                        function showTime() {
+
+                            var t = new Date(seconds);
+                            var str;
+                            var yy = t.getYear();
+                            var MM = t.getMonth() + 1;
+                            var dd = t.getDate();
+                            var hh = t.getHours();
+                            var mm = t.getMinutes();
+                            var ss = t.getSeconds();
+
+                            if (yy < 1900) yy = yy + 1900;
+                            if (MM < 10) MM = '0' + MM;
+                            if (dd < 10) dd = '0' + dd;
+                            if (hh < 10) hh = '0' + hh;
+                            if (mm < 10) mm = '0' + mm;
+                            if (ss < 10) ss = '0' + ss;
+
+                            str = yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss;
+                            document.getElementById("ctl00_lblDate").innerHTML = str;
+                            setTimeout("runTime()", 1000);
+                        }
+                    </script>
+                    
+                    
+                </div>
+            </div>
+
+            <div id="nav">
+                
+<ul>
+    <li><img alt="" src="../images/BTNline.jpg" height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0001" href="javascript:__doPostBack('ctl00$Menu1$lbtn0001','')" style="display:inline-block;">Register</a></li>   
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>        
+    <li class="navA"><a id="ctl00_Menu1_lbtn0002" href="javascript:__doPostBack('ctl00$Menu1$lbtn0002','')" style="display:inline-block;">Recheck(Cancel) Appointment</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0003" href="javascript:__doPostBack('ctl00$Menu1$lbtn0003','')" style="display:inline-block;">Query Consulting No</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0004" href="javascript:__doPostBack('ctl00$Menu1$lbtn0004','')" style="display:inline-block;">Clinic Hours</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0005" href="javascript:__doPostBack('ctl00$Menu1$lbtn0005','')" style="display:inline-block;">Hospital Page</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0006" href="javascript:__doPostBack('ctl00$Menu1$lbtn0006','')" style="display:inline-block;">Instruction</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+</ul>
+
+            </div>
+            
+    <div id="content">
+        <div id="contentGrayBG">
+            <div id="UpdateProgress" align="center" style="position: relative; top: 50%; background-color: #FFE6CC;">
+                <div id="ctl00_ContentPlaceHolder1_UpdateProgress1" style="display:none;">
+	
+                        <img id="ctl00_ContentPlaceHolder1_Image1" alt="處理中 Loading" src="../images/progress.gif" height="40" width="40" border="0" />
+                        <span style="font-size: large; font-weight: bold; font-family: 'Arial Unicode MS';">
+                            處理中(Loading)...</span>
+                    
+</div>
+            </div>
+            <div id="titleImg">
+                <div id="language">
+                    <a id="ctl00_ContentPlaceHolder1_lbLanguage" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lbLanguage','')">中文版</a>
+                &nbsp;
+                </div>
+                <img id="ctl00_ContentPlaceHolder1_ImgTitle" alt="網路掛號標示 Registration Title" src="../images/option_eng/NetReg.png" border="0" />
+                <br />
+            </div>
+            <div id="content_main">
+                <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+	
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <div id="Announcement">
+                                        
+                                        <div>
+
+	</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$ImgbtnDept" id="ctl00_ContentPlaceHolder1_ImgbtnDept" alt="依科別掛號 Register by Department" src="../images/btn_eng/btn_R_P.jpg" border="0" />
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$ImgbtnDate" id="ctl00_ContentPlaceHolder1_ImgbtnDate" alt="依日期掛號 Register by Date" src="../images/btn_eng/btn_R_D_no.jpg" border="0" />
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$ImgbtnDr" id="ctl00_ContentPlaceHolder1_ImgbtnDr" alt="依醫師掛號 Register by Doctor" src="../images/btn_eng/btn_R_Dr_no.jpg" border="0" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                            <table width="100%">
+                                                <tr>
+                                                    <td>
+                                                        
+                                                        <img id="ctl00_ContentPlaceHolder1_ImgSeleDept" alt="*" src="../images/icon_area.jpg" height="28" width="27" border="0" />
+                                                        <span id="ctl00_ContentPlaceHolder1_lblSeleDept" class="elementBlack"><font size="3">Please Choose the Department of Registration.</font></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table id="ctl00_ContentPlaceHolder1_tbRegFiveDept" class="tbDept" border="0" width="850">
+		<tr class="trDeptHead">
+			<td class="tdDeptHeadCell" width="425"><font size="3">Medical Department</font></td><td class="tdDeptHeadCell" width="425"><font size="3">Else Departments</font></td>
+		</tr><tr class="trDeptBody">
+			<td class="tdDeptBodyCell" width="425"><font size="3"><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1301&amp;Date=&amp;Noon=">General Psychiatry<br/><br/></a><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1302&amp;Date=&amp;Noon=">Child Teenager Psychiatry<br/><br/></a></font></td><td class="tdDeptBodyCell" width="425"><font size="3"><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1201&amp;Date=&amp;Noon=">Neurology Medicine<br/><br/></a><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1204&amp;Date=&amp;Noon=">Family Medicine<br/><br/></a><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1304&amp;Date=&amp;Noon=">Psychological counseling<br/><br/></a></font></td>
+		</tr>
+	</table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 20px">
+                                </td>
+                            </tr>
+                        </table>
+                    
+</div>
+            </div>
+        </div>
+    </div>
+
+
+            
+            <div id="ctl00_PageFooter_content"><div id="footer">
+<div id="footerText">
+<div id="name">Taoyuan Psychiatric Center , Ministry of Health and Welfare</div>
+<div>No.71, Longshou St., Taoyuan Dist., Taoyuan City 33058, Taiwan (ROC)</div>
+<div id="info">TEL：(03) 369-8553 EXT 9&nbsp; FAX：(03) 360-6929  </div>
+<div id="note">Copyright c Taoyuan Psychiatric Center All Rights Reserved. No part of this website may be reproduced without Taoyuan Psychiatric Center's express consent.</div>
+<div id="note">Google Chrome is the recommended browser for this website for optimal security.
+<p></p></div></div></div></div>
+
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

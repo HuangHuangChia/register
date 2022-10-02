@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<!--(HTML 5 新式宣告)-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+    <!--直接指定瀏覽器版本，避開IE相容性問題-->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><title>
+	網路掛號
+</title><link href="../css/StyleSheet.css" rel="stylesheet" type="text/css" /><link href="../css/ZSY.css" rel="stylesheet" type="text/css" /><link href="../css/controls.css" rel="stylesheet" type="text/css" /><link href="../css/elements.css" rel="stylesheet" type="text/css" /><link href="../css/option.css" rel="stylesheet" type="text/css" /><link href="../css/reset.css" rel="stylesheet" type="text/css" media="screen" /><link href="../css/mold.css" rel="stylesheet" type="text/css" /><link href="../css/font.css" rel="stylesheet" type="text/css" /><link href="../css/m02.css" rel="stylesheet" type="text/css" /><link href="../css/m02a.css" rel="stylesheet" type="text/css" /><link href="../css/m04.css" rel="stylesheet" type="text/css" /><link id="ctl00_RefStyleSheet" rel="stylesheet" type="text/css" />
+    
+    <!--引用jQuery-->
+    
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../lib/jquery-migrate-1.4.1.min.js"></script>
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="Reg_NetReg.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = '{"name":"zh-TW","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"NT$","NaNSymbol":"不是一個數字","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"負無窮大","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"正無窮大","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"上午","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402271999999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"yyyy\u0027年\u0027M\u0027月\u0027d\u0027日\u0027 tt hh:mm:ss","LongDatePattern":"yyyy\u0027年\u0027M\u0027月\u0027d\u0027日\u0027","LongTimePattern":"tt hh:mm:ss","MonthDayPattern":"M\u0027月\u0027d\u0027日\u0027","PMDesignator":"下午","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"yyyy/M/d","ShortTimePattern":"tt hh:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"yyyy\u0027年\u0027M\u0027月\u0027","AbbreviatedDayNames":["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],"ShortestDayNames":["日","一","二","三","四","五","六"],"DayNames":["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],"AbbreviatedMonthNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"MonthNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"IsReadOnly":false,"NativeCalendarName":"西曆 (中文)","AbbreviatedMonthGenitiveNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""],"MonthGenitiveNames":["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月",""]}}';//]]>
+</script>
+
+<script src="/OINetReg/ScriptResource.axd?d=y4KpVz0itAAZi30-8qzXgp6pzGSyL3NQBuWcZlzQsGxvUgUgqE3CNEP8NW88c2UVxe7KJshDm7GLPi9T5ASUhfPV_eWGzToxm_s_VpgjMGJr60VidfcK_3pYslEvhZVHzzeacX9J4DsZHfH8iBeTZ9AhdjWa_v0s7HhuPWAKIM-ugeuP0&amp;t=3f4a792d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 用戶端架構無法載入。');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B75409E9" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Hn4qzk/Ca9v2+APXSFK+uXE63Z6GvpjfOw3GL5WlldSe+UXvqqziTtA7WPZUi3Wkt6PUkqhtNHbJa3Ic85BfGLkN5PZR2zm40tisgfEdthsKUrWLhup7aG9S3cIQf3mlXOlTnWeIK7Mw+QHMlVhWXSdPwUru+Vlooc7PuHfCqJ2AEuvs" />
+        <div id="page">
+            
+            <div id="header">
+                <div id="systemtime">
+                    
+                    <span id="ctl00_lblDate"><font color="#FFFFFF"></font></span>&nbsp;
+                <span id="ctl00_lblVisitor"><font color="#FFFFFF">[瀏覽總次數：3331700]</font></span>
+                    <input type="hidden" name="ctl00$hfServerTime" id="ctl00_hfServerTime" value="1664323803513.23" />
+
+                    <script type="text/javascript">
+                        var systemTime = document.getElementById('ctl00_hfServerTime').value;
+                        var seconds = parseInt(systemTime);
+
+                        showTime();
+
+                        function runTime() {
+                            seconds += 1000;
+                            showTime(seconds);
+                        }
+
+                        function showTime() {
+
+                            var t = new Date(seconds);
+                            var str;
+                            var yy = t.getYear();
+                            var MM = t.getMonth() + 1;
+                            var dd = t.getDate();
+                            var hh = t.getHours();
+                            var mm = t.getMinutes();
+                            var ss = t.getSeconds();
+
+                            if (yy < 1900) yy = yy + 1900;
+                            if (MM < 10) MM = '0' + MM;
+                            if (dd < 10) dd = '0' + dd;
+                            if (hh < 10) hh = '0' + hh;
+                            if (mm < 10) mm = '0' + mm;
+                            if (ss < 10) ss = '0' + ss;
+
+                            str = yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss;
+                            document.getElementById("ctl00_lblDate").innerHTML = str;
+                            setTimeout("runTime()", 1000);
+                        }
+                    </script>
+                    
+                    
+                </div>
+            </div>
+
+            <div id="nav">
+                
+<ul>
+    <li><img alt="" src="../images/BTNline.jpg" height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0001" href="javascript:__doPostBack('ctl00$Menu1$lbtn0001','')" style="display:inline-block;">網路掛號</a></li>   
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>        
+    <li class="navA"><a id="ctl00_Menu1_lbtn0002" href="javascript:__doPostBack('ctl00$Menu1$lbtn0002','')" style="display:inline-block;">查詢(取消)掛號</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0003" href="javascript:__doPostBack('ctl00$Menu1$lbtn0003','')" style="display:inline-block;">看診號查詢</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0004" href="javascript:__doPostBack('ctl00$Menu1$lbtn0004','')" style="display:inline-block;">門診時刻查詢</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0005" href="javascript:__doPostBack('ctl00$Menu1$lbtn0005','')" style="display:inline-block;">醫院首頁</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+    <li class="navA"><a id="ctl00_Menu1_lbtn0006" href="javascript:__doPostBack('ctl00$Menu1$lbtn0006','')" style="display:inline-block;">掛號說明</a></li>
+    <li><img alt="" src="../images/BTNline.jpg"  height="30" /></li>
+</ul>
+
+            </div>
+            
+    <div id="content">
+        <div id="contentGrayBG">
+            <div id="UpdateProgress" align="center" style="position: relative; top: 50%; background-color: #FFE6CC;">
+                <div id="ctl00_ContentPlaceHolder1_UpdateProgress1" style="display:none;">
+	
+                        <img id="ctl00_ContentPlaceHolder1_Image1" alt="處理中 Loading" src="../images/progress.gif" height="40" width="40" border="0" />
+                        <span style="font-size: large; font-weight: bold; font-family: 'Arial Unicode MS';">
+                            處理中(Loading)...</span>
+                    
+</div>
+            </div>
+            <div id="titleImg">
+                <div id="language">
+                    <a id="ctl00_ContentPlaceHolder1_lbLanguage" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lbLanguage','')">English Version</a>
+                &nbsp;
+                </div>
+                <img id="ctl00_ContentPlaceHolder1_ImgTitle" alt="網路掛號標示 Registration Title" src="../images/option_cht/NetReg.png" border="0" />
+                <br />
+            </div>
+            <div id="content_main">
+                <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+	
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <div id="Announcement">
+                                        
+                                        <div>
+
+	</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$ImgbtnDept" id="ctl00_ContentPlaceHolder1_ImgbtnDept" alt="依科別掛號 Register by Department" src="../images/btn_cht/btn_R_P.jpg" border="0" />
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$ImgbtnDate" id="ctl00_ContentPlaceHolder1_ImgbtnDate" alt="依日期掛號 Register by Date" src="../images/btn_cht/btn_R_D_no.jpg" border="0" />
+                                    <input type="image" name="ctl00$ContentPlaceHolder1$ImgbtnDr" id="ctl00_ContentPlaceHolder1_ImgbtnDr" alt="依醫師掛號 Register by Doctor" src="../images/btn_cht/btn_R_Dr_no.jpg" border="0" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    
+                                            <table width="100%">
+                                                <tr>
+                                                    <td>
+                                                        
+                                                        <img id="ctl00_ContentPlaceHolder1_ImgSeleDept" alt="*" src="../images/icon_area.jpg" height="28" width="27" border="0" />
+                                                        <span id="ctl00_ContentPlaceHolder1_lblSeleDept" class="elementBlack"><font size="4">請選擇掛號科別</font></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table id="ctl00_ContentPlaceHolder1_tbRegFiveDept" class="tbDept" border="0" width="850">
+		<tr class="trDeptHead">
+			<td class="tdDeptHeadCell" width="425"><font size="4">精神科系</font></td><td class="tdDeptHeadCell" width="425"><font size="4">團體治療或心理諮詢</font></td>
+		</tr><tr class="trDeptBody">
+			<td class="tdDeptBodyCell" width="425"><font size="3"><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1301&amp;Date=&amp;Noon=">一般精神科<br/><br/></a><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1302&amp;Date=&amp;Noon=">兒童精神科<br/><br/></a></font></td><td class="tdDeptBodyCell" width="425"><font size="3"><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1201&amp;Date=&amp;Noon=">神經內科<br/><br/></a><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1204&amp;Date=&amp;Noon=">家醫科<br/><br/></a><a class="tdDeptBodyCellLink" href="../OINetReg.Reg/Reg_RegTable.aspx?HID=F&amp;Way=Dept&amp;DivDr=1304&amp;Date=&amp;Noon=">臨床心理科<br/><br/></a></font></td>
+		</tr>
+	</table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 20px">
+                                </td>
+                            </tr>
+                        </table>
+                    
+</div>
+            </div>
+        </div>
+    </div>
+
+
+            
+            <div id="ctl00_PageFooter_content"><div id="footer">
+<div id="footerText">
+<div id="name">衛生福利部桃園療養院</div>
+<div>33058 桃園市桃園區龍壽街71號</div>
+<div id="info">電話：(03) 369-8553 總機 9&nbsp; 傳真：(03) 360-6929 電子郵件：<a href="mailto:super@typc.mohw.gov.tw">super@typc.mohw.gov.tw</a> </div>
+<div id="note">禁止任何網際網路服務業者轉錄本院網路資訊之內容供人點閱。但以網路搜尋或超連結方式，進入本院之網址（域）直接點閱者，不在此限。</div>
+<div id="note">本網站建議使用 Chrome 瀏覽器以獲得最佳的安全性</div></div></div></div>
+
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>
